@@ -1,16 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.javafxteste.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javafxteste.HelloController">
+   <children>
+      <TextField fx:id="txtNome" layoutX="71.0" layoutY="122.0" prefHeight="25.0" prefWidth="287.0" />
+      <Text layoutX="224.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro " wrappingWidth="153.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="71.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insira suas informações" wrappingWidth="286.796875">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="71.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtEmail" layoutX="71.0" layoutY="186.0" prefHeight="25.0" prefWidth="287.0" />
+      <Text layoutX="71.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtIdade" layoutX="71.0" layoutY="253.0" prefHeight="25.0" prefWidth="47.0" />
+      <Text layoutX="71.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Idade">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnRegister" layoutX="154.0" layoutY="289.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #fabe50;" text="CADASTRE" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnList" layoutX="377.0" layoutY="281.0" mnemonicParsing="false" onAction="#gerarLista" prefHeight="51.0" prefWidth="153.0" text="Gerar Lista de Pessoas" />
+   </children>
+</AnchorPane>
